@@ -6,13 +6,13 @@ let c = 0
 const Cof = 0.7
 const BlockSize = 15
 const blocoMenor = {
-    space: 50,
+    space: 250,
     speed: 0, // m/s
     mass: 1, // Kg  
 }
 
 const blocoMaior = {
-    space: 100,
+    space: 400,
     speed: 2, // m/s
     mass: 100, // Kg
 }
