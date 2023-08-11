@@ -3,7 +3,7 @@ const maior = document.querySelector('#maior')
 const count = document.querySelector('#count')
 
 let c = 0
-const Cof = 7
+const Cof = 0.7
 const BlockSize = 15
 const blocoMenor = {
     space: 50,
@@ -46,7 +46,7 @@ function start() {
         if (blocoMenor.space >= 150) menor.remove()
         
 
-    }, 10);
+    }, 1);
 }
 start()
 function BlockToBlock () {
