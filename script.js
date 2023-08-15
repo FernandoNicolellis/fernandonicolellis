@@ -42,8 +42,8 @@ function start() {
 
         if (blocoMaior.space <= blocoMenor.space + BlockSize) BlockToBlock()
         if (blocoMenor.space <=0) BlockToWall()
-        if (blocoMaior.space >= 150) maior.remove()
-        if (blocoMenor.space >= 150) menor.remove()
+        if (blocoMaior.space >= 500) maior.remove()
+        if (blocoMenor.space >= 500) menor.remove()
         
 
     }, 10);
