@@ -6,13 +6,13 @@ let c = 0
 const Cof = 7
 const BlockSize = 15
 const blocoMenor = {
-    space: 250,
+    space: 50,
     speed: 0, // m/s
     mass: 1, // Kg  
 }
 
 const blocoMaior = {
-    space: 400,
+    space: 100,
     speed: 2, // m/s
     mass: 100, // Kg
 }
@@ -42,9 +42,9 @@ function start() {
 
         if (blocoMaior.space <= blocoMenor.space + BlockSize) BlockToBlock()
         if (blocoMenor.space <=0) BlockToWall()
-        if (blocoMaior.space >= 500) maior.remove()
-        if (blocoMenor.space >= 500) menor.remove()
-        
+        if (blocoMaior.space >= 150) maior.remove()
+        if (blocoMenor.space >= 150) menor.remove()
+
 
     }, 10);
 }
@@ -53,13 +53,13 @@ function BlockToBlock () {
 
     let Q = blocoMaior.speed * blocoMaior.mass + blocoMenor.speed * blocoMenor.mass
     let Vap = blocoMaior.speed - blocoMenor.speed
-    
+
     let b = (Q - Vap) / (blocoMaior.mass + blocoMenor.mass)
     let a = Vap + b
-    
+
     blocoMaior.speed = b
     blocoMenor.speed = a
-    
+
     c += 1
     count.innerText = c
 }
@@ -68,5 +68,4 @@ function BlockToWall () {
     c += 1
     count.innerText = c
 }
-
 
