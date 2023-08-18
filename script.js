@@ -24,6 +24,9 @@ function start() {
     blocoMaior.mass = Number(prompt('Massa do bloco à DIREITA: '))
     blocoMaior.speed = Number(prompt('Velocidade do bloco à DIREITA: '))
 
+    blocoMenor.speed /= 5
+    blocoMaior.speed /= 5
+
 
     document.querySelector('#text1').innerText = blocoMenor.mass + 'KG'
     document.querySelector('#text2').innerText = blocoMaior.mass + 'KG'
@@ -46,7 +49,7 @@ function start() {
         if (blocoMenor.space >= 150) menor.remove()
 
 
-    }, 10);
+    }, 2);
 }
 start()
 function BlockToBlock () {
