@@ -57,7 +57,7 @@ function BlockToBlock () {
     let Q = blocoMaior.speed * blocoMaior.mass + blocoMenor.speed * blocoMenor.mass
     let Vap = blocoMaior.speed - blocoMenor.speed
 
-    let b = (Q - Vap) / (blocoMaior.mass + blocoMenor.mass)
+    let b = (Q - (blocoMenor.mass * Vap)) / (blocoMaior.mass + blocoMenor.mass) // Depois de dois anos eu arrumei (estava: let b = (Q - Vap) / (blocoMaior.mass + blocoMenor.mass))
     let a = Vap + b
 
     blocoMaior.speed = b
